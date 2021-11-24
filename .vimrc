@@ -21,6 +21,8 @@ set softtabstop=2			" Number of spaces per Tab
 " Advanced
 syntax on                               " Syntax Highlighting
 
+set nocompatible                        " Disable compatible VI mode
+
 set ruler				" Show row and column ruler information
  
 set undolevels=1000			" Number of undo levels
@@ -30,6 +32,7 @@ set backspace=indent,eol,start		" Backspace behaviour
 " Lightline
 set laststatus=2                        " Enable status line
 set noshowmode                          " Disable showmode
+
 let g:lightline = {
   \ 'colorscheme': 'nord',
   \ }                                   " Nord color scheme (status line)
