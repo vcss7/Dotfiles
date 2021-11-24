@@ -25,3 +25,14 @@ set ruler				" Show row and column ruler information
  
 set undolevels=1000			" Number of undo levels
 set backspace=indent,eol,start		" Backspace behaviour
+
+" Plugins =============================
+" Lightline
+set laststatus=2                        " Enable status line
+set noshowmode                          " Disable showmode
+let g:lightline = {
+  \ 'colorscheme': 'nord',
+  \ }                                   " Nord color scheme (status line)
+
+" Vim-hardtime
+let g:hardtime_default_on=1             " Hardtime default to on

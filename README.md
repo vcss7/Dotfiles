@@ -2,6 +2,9 @@
 
 ### General TODO ###
 
+#### vim directory ####
+- [ ] check submodules work
+
 #### xinitrc File ####
 
 - [ ] add support for other DE / WM configurations
