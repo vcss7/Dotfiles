@@ -3,7 +3,6 @@
 ### General TODO ###
 
 #### vim directory ####
-- [ ] check submodules work
 
 #### xinitrc File ####
 
@@ -13,4 +12,10 @@
 #### bashrc File ####
 
 - [ ] Add git branch to PS1
+- [ ] check PS1 in other terminals
+- [ ] add PS2
 
+#### bash_aliases ####
+
+- [ ] make mpvcam alias readable
+- [ ] add user input support (i.e. turn into function)
