@@ -36,6 +36,9 @@ alias cp='cp --interactive --verbose'
 alias mv='mv --interactive --verbose'
 alias rm='rm --interactive --verbose'
 
+# print working directory
+alias p='pwd'
+
 # capture webcam output with mpv
 alias mpvcam='mpv --demuxer-lavf-format=video4linux2      \
                   --demuxer-lavf-o-set=input_format=mjpeg \

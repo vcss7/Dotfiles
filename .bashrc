@@ -38,3 +38,26 @@ fi
 
 ## auto ssh athentication git
 # ssh-add ~/.ssh/id_ed25519
+
+
+##### Functions #####
+
+# move up $1 directories
+up () {
+  local d=""
+  local limit="$1"
+
+  # Default to limit of 1
+  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+    limit=1
+  fi
+
+  for ((i=1;i<=limit;i++)); do
+    d="../$d"
+  done
+  
+  # perform cd. Show error if cd fails
+  if ! cd "$d"; then
+    echo "Couldn't go up $limit dirs.";
+  fi
+}
