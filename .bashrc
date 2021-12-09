@@ -39,8 +39,11 @@ fi
 ## auto ssh athentication git
 # ssh-add ~/.ssh/id_ed25519
 
+# add local binaries to path
+export PATH=~/local/bin:$PATH
 
-##### Functions #####
+
+#################### Functions ###################
 
 # move up $1 directories
 up () {
@@ -61,3 +64,4 @@ up () {
     echo "Couldn't go up $limit dirs.";
   fi
 }
+

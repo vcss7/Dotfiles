@@ -31,6 +31,11 @@ else
                   --group-directories-first'
 fi
 
+# some tree aliases for better output
+if ! tree -v &> /dev/null; then
+  alias tree='tree -aCF --dirsfirst'
+fi
+
 # prompt before overwriting
 alias cp='cp --interactive --verbose'
 alias mv='mv --interactive --verbose'
