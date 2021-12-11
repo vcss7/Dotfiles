@@ -32,8 +32,8 @@ else
 fi
 
 # some tree aliases for better output
-if ! tree -v &> /dev/null; then
-  alias tree='tree -aCF --dirsfirst'
+if tree -v &> /dev/null; then
+  alias t='tree -aCF --dirsfirst -I *.git*'
 fi
 
 # prompt before overwriting
