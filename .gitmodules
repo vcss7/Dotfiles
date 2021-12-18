@@ -7,3 +7,9 @@
 [submodule ".vim/pack/plugins/start/nerdtree"]
 	path = .vim/pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/.vim/pack/dev-plugins/start/vim-shellcheck"]
+	path = .vim/.vim/pack/dev-plugins/start/vim-shellcheck
+	url = https://github.com/itspriddle/vim-shellcheck.git
+[submodule ".vim/pack/dev-plugins/start/vim-shellcheck"]
+	path = .vim/pack/dev-plugins/start/vim-shellcheck
+	url = https://github.com/itspriddle/vim-shellcheck.git

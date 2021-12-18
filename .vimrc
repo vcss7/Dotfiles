@@ -28,7 +28,9 @@ set ruler				" Show row and column ruler information
 set undolevels=1000			" Number of undo levels
 set backspace=indent,eol,start		" Backspace behaviour
 
-" Plugins =============================
+let g:netrw_dirhistmax=0                " Disable netrwlist history/bookmarks
+
+" ========================= Plugins =========================
 " Lightline
 set laststatus=2                        " Enable status line
 set noshowmode                          " Disable showmode
