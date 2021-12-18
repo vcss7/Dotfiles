@@ -1,8 +1,22 @@
-# Prompt urxvt
-PS1='\033[0;36m[\u@\h \[\033[0m\]\W\033[0;36m]\$ \[\033[0m\]'
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+# ANSI Color escape sequences
+# These work as described with the .Xresources file in this same repository
+NO_COLOR='\033[0m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BROWN='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT_GRAY='\033[0;37m'
+YELLOW='\033[1;33m'
+VIOLET='\033[1;35m'
+
+# Prompt urxvt
+PS1="$CYAN[\u@\h $NO_COLOR\W $CYAN]\$ $NO_COLOR"
+PS2="$CYAN>$NO_COLOR"
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
