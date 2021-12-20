@@ -13,3 +13,6 @@
 [submodule ".vim/pack/dev-plugins/start/vim-shellcheck"]
 	path = .vim/pack/dev-plugins/start/vim-shellcheck
 	url = https://github.com/itspriddle/vim-shellcheck.git
+[submodule ".vim/pack/dev-plugins/start/vim-latex"]
+	path = .vim/pack/dev-plugins/start/vim-latex
+	url = git@github.com:vim-latex/vim-latex.git

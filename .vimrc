@@ -41,3 +41,7 @@ let g:lightline = {
 
 " Vim-hardtime
 let g:hardtime_default_on=1             " Hardtime default to on
+
+" Vim-latex
+filetype plugin on                      " Identify latex file and run vim-latex
+let g:tex_flavor='latex'                " defult file type 'tex'
