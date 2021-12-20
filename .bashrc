@@ -14,8 +14,15 @@ LIGHT_GRAY='\033[0;37m'
 YELLOW='\033[1;33m'
 VIOLET='\033[1;35m'
 
+# git branch for PS1
+parse_git_branch() {
+  if command -v git; then
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
+  fi
+}
+
 # Prompt urxvt
-PS1="$CYAN[\u@\h $NO_COLOR\W $CYAN]\$ $NO_COLOR"
+PS1="$CYAN[\u@\h $NO_COLOR\W$CYAN] \$(parse_git_branch)\$ $NO_COLOR"
 PS2="$CYAN>$NO_COLOR"
 
 # don't put duplicate lines or lines starting with space in the history.
