@@ -16,7 +16,7 @@ VIOLET='\033[1;35m'
 
 # git branch for PS1
 parse_git_branch() {
-  if command -v git; then
+  if command -v git &> /dev/null; then
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
   fi
 }
