@@ -17,6 +17,9 @@ set shiftwidth=2			" Number of auto-indent spaces
 set smartindent				" Enable smart-indent
 set smarttab				" Enable smart-tabs
 set softtabstop=2			" Number of spaces per Tab
+
+set textwidth=80                        " line wrap at 80 characters
+set colorcolumn=80                      " color the 80th column
  
 " Advanced
 syntax on                               " Syntax Highlighting
