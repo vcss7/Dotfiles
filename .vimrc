@@ -30,6 +30,10 @@ set backspace=indent,eol,start		" Backspace behaviour
 
 let g:netrw_dirhistmax=0                " Disable netrwlist history/bookmarks
 
+set foldmethod=syntax                   " Fold based on syntax highlighing
+set foldnestmax=10                      " Deepest fold is 10 levels
+set nofoldenable                        " Don't fold by default
+set foldlevel=1                         " 
 " ========================= Plugins =========================
 " Lightline
 set laststatus=2                        " Enable status line
