@@ -1,0 +1,88 @@
+### Graphical file manager ###
+pcmanfm
+
+### Console file manager
+ranger
+vifm
+
+### File viewer ###
+bat
+
+### Graphical web browser ###
+qutebrowser 
+icecat
+firefox
+
+### Console text editors ###
+vim 
+nano
+
+### Sound management ###
+alsa-utils
+
+### Developer tools ###
+git
+geany
+lab
+jq
+curl
+
+### Wallpaper viewer ###
+picom
+compton
+nitrogen
+feh
+
+### Window manager ###
+dwm
+i3-wm
+xmonad
+
+### Log in manager ###
+sddm
+lightdm
+
+### Password Manager ###
+keepassxc
+
+### Terminal ###
+alacritty
+kitty
+qterminal
+st
+urxvt
+zutty
+
+### Document Viewer
+zathura
+zathura-pdf-poppler
+
+### Markup converter ###
+pandoc                  # Use with lynx to view markdown files.
+
+### Console web browser ###
+lynx
+
+### Video utilities
+mpv
+v4l2-ctl
+ffmpeg
+
+### Audio utilities
+alsa
+pavucontrol
+
+### Video ###
+youtube-dl
+
+# misc
+lolcat
+cowsay
+cmatrix
+asciiquarium
+
+### Disk Management ###
+udisks2
+
+### Only available in AUR or must install from source ###
+usbimager
