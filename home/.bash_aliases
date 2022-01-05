@@ -31,15 +31,26 @@ else
                   --group-directories-first'
 fi
 
-# some tree aliases for better output
-if tree -v &> /dev/null; then
-  alias t='tree -aCF --dirsfirst -I *.git*'
-fi
 
 # prompt before overwriting
 alias cp='cp --interactive --verbose'
 alias mv='mv --interactive --verbose'
-alias rm='rm --interactive --verbose'
+alias rm='rm --interactive=once --verbose'
+
+# git aliases
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit'
+alias gl='git log'
+alias gs='git status'
+alias gsubup='git submodule update --init'
+alias gsubpull='git submodule foreach git pull origin master'
+alias gsubpush='git submodule foreach git push origin master'
+
+# some tree aliases for better output
+if tree -v &> /dev/null; then
+  alias t='tree -aCF --dirsfirst -I *.git*'
+fi
 
 # print working directory
 alias p='pwd'

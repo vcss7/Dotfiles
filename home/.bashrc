@@ -1,6 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# vi mode
+set -o vi
+
 # ANSI Color escape sequences
 # These work as described with the .Xresources file in this same repository
 NO_COLOR='\033[0m'
