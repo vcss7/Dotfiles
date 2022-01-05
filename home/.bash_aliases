@@ -39,6 +39,7 @@ alias rm='rm --interactive=once --verbose'
 
 # git aliases
 alias ga='git add'
+alias gaa='git add .'
 alias gb='git branch'
 alias gc='git commit'
 alias gl='git log'
