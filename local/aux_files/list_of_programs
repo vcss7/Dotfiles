@@ -20,14 +20,16 @@ nano
 ### Sound management ###
 alsa-utils
 
-### Developer tools ###
+### Development tools ###
+base-devel      # Arch
+base-essential  # Debian
 git
 geany
 lab
 jq
 curl
 
-### Wallpaper viewer ###
+### Wallpaper ###
 picom
 compton
 nitrogen
@@ -57,16 +59,11 @@ zutty
 zathura
 zathura-pdf-poppler
 
-### Markup converter ###
-pandoc                  # Use with lynx to view markdown files.
-
-### Console web browser ###
-lynx
-
 ### Video utilities
 mpv
 v4l2-ctl
 ffmpeg
+imagemagick
 
 ### Audio utilities
 alsa
