@@ -1,24 +1,18 @@
-[submodule ".vim/pack/plugins/start/lightline"]
-	path = .vim/pack/plugins/start/lightline
-	url = https://github.com/itchyny/lightline.vim
-[submodule ".vim/pack/plugins/start/vim-hardtime"]
-	path = .vim/pack/plugins/start/vim-hardtime
-	url = https://github.com/takac/vim-hardtime.git
-[submodule ".vim/pack/plugins/start/nerdtree"]
-	path = .vim/pack/plugins/start/nerdtree
-	url = https://github.com/preservim/nerdtree.git
-[submodule ".vim/.vim/pack/dev-plugins/start/vim-shellcheck"]
-	path = .vim/.vim/pack/dev-plugins/start/vim-shellcheck
-	url = https://github.com/itspriddle/vim-shellcheck.git
-[submodule ".vim/pack/dev-plugins/start/vim-shellcheck"]
-	path = .vim/pack/dev-plugins/start/vim-shellcheck
-	url = https://github.com/itspriddle/vim-shellcheck.git
-[submodule ".vim/pack/dev-plugins/start/vim-latex"]
-	path = .vim/pack/dev-plugins/start/vim-latex
-	url = git@github.com:vim-latex/vim-latex.git
-[submodule ".vim/pack/dev-plugins/start/rust.vim"]
-	path = .vim/pack/dev-plugins/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim
 [submodule "home/.vim/pack/plugins/start/vimwiki"]
 	path = home/.vim/pack/plugins/start/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "home/.vim/pack/dev-plugins/start/syntastic"]
+	path = home/.vim/pack/dev-plugins/start/syntastic
+	url = git@github.com:vim-syntastic/syntastic.git
+[submodule "home/.vim/pack/dev-plugins/start/nerdtree"]
+	path = home/.vim/pack/dev-plugins/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule "home/.vim/pack/dev-plugins/start/rust.vim"]
+	path = home/.vim/pack/dev-plugins/start/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git
+[submodule "home/.vim/pack/plugins/start/vim-hardtime"]
+	path = home/.vim/pack/plugins/start/vim-hardtime
+	url = git@github.com:takac/vim-hardtime.git
+[submodule "home/.vim/pack/plugins/start/lightline"]
+	path = home/.vim/pack/plugins/start/lightline
+	url = git@github.com:itchyny/lightline.vim.git
