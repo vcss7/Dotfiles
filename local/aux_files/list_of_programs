@@ -43,6 +43,7 @@ xmonad
 ### Log in manager ###
 sddm
 lightdm
+ly
 
 ### Password Manager ###
 keepassxc
@@ -64,6 +65,10 @@ mpv
 v4l2-ctl
 ffmpeg
 imagemagick
+xf86-video-intel
+xf86-video-amdgpu
+intel_gpu_tools
+radeontop
 
 ### Audio utilities
 alsa
