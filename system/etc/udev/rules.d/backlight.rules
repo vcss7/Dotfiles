@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="amdgpu_b10", GROUP="wheel", MODE="0664"
