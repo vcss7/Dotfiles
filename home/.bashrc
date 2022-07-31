@@ -4,18 +4,22 @@
 # vi mode
 set -o vi
 
-# ANSI Color escape sequences
-# These work as described with the .Xresources file in this same repository
-NO_COLOR='\033[0m'
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-BROWN='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT_GRAY='\033[0;37m'
-YELLOW='\033[1;33m'
-VIOLET='\033[1;35m'
+# Colors: for changing the text output color
+BLACK_FG=$(tput setaf 0)
+RED_FG=$(tput setaf 1)
+GREEN_FG=$(tput setaf 2)
+YELLOW_FG=$(tput setaf 3)
+LIME_YELLOW_FG=$(tput setaf 190)
+POWDER_BLUE_FG=$(tput setaf 153)
+BLUE_FG=$(tput setaf 4)
+MAGENTA_FG=$(tput setaf 5)
+CYAN_FG=$(tput setaf 6)
+WHITE_FG=$(tput setaf 7)
+BRIGHT_FG=$(tput bold)
+NORMAL_FG=$(tput sgr0)
+BLINK_FG=$(tput blink)
+REVERSE_FG=$(tput smso)
+UNDERLINE_FG=$(tput smul)
 
 # git branch for PS1
 parse_git_branch() {
@@ -25,8 +29,8 @@ parse_git_branch() {
 }
 
 # Prompt urxvt
-PS1="$CYAN[\u@\h $NO_COLOR\W$CYAN] \$(parse_git_branch)\$ $NO_COLOR"
-PS2="$CYAN>$NO_COLOR"
+PS1="$POWDER_BLUE_FG[\u@\h $NORMAL_FG\W$POWDER_BLUE_FG] \$(parse_git_branch)\$ $NORMAL_FG"
+PS2="$POWDER_BLUE_FG>$NORMAL_FG"
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
