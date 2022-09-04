@@ -1,58 +1,69 @@
-" General
-set number relativenumber       	" Show relative line numbers
-set linebreak				" Break lines at word (requires Wrap lines)
-set showbreak=+++ 			" Wrap-broken line prefix
-set textwidth=100			" Line wrap (number of cols)
-set showmatch				" Highlight matching brace
-set visualbell				" Use visual bell (no beeping)
+"" General
+syntax on
+set exrc                            " Custom vimrcs
+set relativenumber                  " Relative number
+set number                          " Show line numbers
 
-set hlsearch				" Highlight all search results
-set smartcase				" Enable smart-case search
-set ignorecase				" Always case-insensitive
-set incsearch				" Searches for strings incrementally
+set noerrorbells                    " No error bell
+set nohlsearch                      " Do not keep highlights
 
-set autoindent				" Auto-indent new lines
-set expandtab				" Use spaces instead of tabs
-set shiftwidth=4			" Number of auto-indent spaces
-set smartindent				" Enable smart-indent
-set smarttab				" Enable smart-tabs
-set softtabstop=4			" Number of spaces per Tab
+set nowrap                          " Wrap lines
+set textwidth=80                    " Line wrap (number of cols)
+set colorcolumn=80
 
-set textwidth=80                        " line wrap at 80 characters
-set colorcolumn=80                      " color the 80th column
+set showmatch                       " Highlight matching brace
+set visualbell                      " Use visual bell (no beeping)
 
-" Advanced
-syntax on                               " Syntax Highlighting
+set smartcase                       " Enable smart-case search
+set ignorecase                      " Always case-insensitive
+set incsearch                       " Searches for strings incrementally
 
-set nocompatible                        " Disable compatible VI mode
+set autoindent                      " Auto-indent new lines
+set expandtab                       " Use spaces instead of tabs
+set shiftwidth=4                    " Number of auto-indent spaces
+set tabstop=4                       " Number of spaces per Tab
+set softtabstop=4                   " Number of spaces per Tab
+set smartindent                     " Intelligent indenting
 
-set ruler				" Show row and column ruler information
+"" Advanced
+set scrolloff=8                     " Start scroll 8 lines before
+set signcolumn=yes                  " Sign column on the left
+set completeopt=menuone             " Menu when code completing
+set completeopt=noinsert            " Do not auto insert when code completing
+set completeopt=noselect            " Do not auto select when code completing
 
-set undolevels=1000			" Number of undo levels
-set backspace=indent,eol,start		" Backspace behaviour
+set undodir=~/.vim/undodir          " Where to keep the undofile
+set undofile                        " Save undo history to a file
+set noswapfile                      " Do not keep a swapfile
+set hidden                          " Keep buffer when out of file
+set nobackup                        " Do not keep a backup
+set ruler                           " Show row and column ruler information
 
-let g:netrw_dirhistmax=0                " Disable netrwlist history/bookmarks
+set undolevels=1000                 " Number of undo levels
+set backspace=indent,eol,start	    " Backspace behaviour
 
-set foldmethod=syntax                   " Fold based on syntax highlighing
-set foldnestmax=10                      " Deepest fold is 10 levels
-set nofoldenable                        " Don't fold by default
-set foldlevel=1                         " 
 
-" ================================== Plugins ==================================
-" Lightline
-set laststatus=2                        " Enable status line
-set noshowmode                          " Disable showmode
+call plug#begin()
 
-let g:lightline = {
-  \ 'colorscheme': 'nord',
-  \ }                                   " Nord color scheme (status line)
+Plug 'arcticicestudio/nord-vim'
+Plug 'preservim/nerdtree'
+Plug 'dmerejkowsky/vim-ale'
 
-" Vim-hardtime
-let g:hardtime_default_on=1             " Hardtime default to on
+call plug#end()
 
-" Vim-latex
-filetype plugin on                      " Identify latex file and run vim-latex
-let g:tex_flavor='latex'                " defult file type 'tex'
+colorscheme nord
 
-" Rust.vim
-" filetype plugin on                      " Full plugin functionality
+let g:ale_linters = {'bash': ["shellcheck"]}
+let g:ale_linters = {'c': ["gcc"]}
+let g:ale_linters = {'c++': ["gcc"]}
+let g:ale_linters = {'java': ["checkstyle"]}
+let g:ale_linters = {'python': ["flake8"]}
+
+let g:ale_fixers = {'bash': ["shellcheck"]}
+let g:ale_fixers = {'c': ["gcc"]}
+let g:ale_fixers = {'c++': ["gcc"]}
+let g:ale_fixers = {'java': ["checkstyle"]}
+let g:ale_fixers = {'python': ["black"]}
+
+let g:ale_fix_on_save = 1
+
