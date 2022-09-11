@@ -29,7 +29,8 @@ parse_git_branch() {
 }
 
 # Prompt urxvt
-PS1="$POWDER_BLUE_FG[\u@\h $NORMAL_FG\W$POWDER_BLUE_FG] \$(parse_git_branch)\$ $NORMAL_FG"
+# PS1="$POWDER_BLUE_FG[\u@\h $NORMAL_FG\W$POWDER_BLUE_FG] \$(parse_git_branch)\$ $NORMAL_FG"
+PS1="\[\e[34m\][\u@\h \[\e[m\]\W\[\e[34m\]] \$\[\e[m\] "
 PS2="$POWDER_BLUE_FG>$NORMAL_FG"
 
 # don't put duplicate lines or lines starting with space in the history.
