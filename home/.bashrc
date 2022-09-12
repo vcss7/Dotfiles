@@ -71,6 +71,8 @@ fi
 # add local binaries to path
 export PATH=~/local/bin:$PATH
 
+# add editor
+export EDITOR=vim
 
 #################### Functions ###################
 
