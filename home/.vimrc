@@ -42,7 +42,7 @@ set ruler                           " Show row and column ruler information
 set undolevels=1000                 " Number of undo levels
 set backspace=indent,eol,start	    " Backspace behaviour
 
-
+"" Plugins
 call plug#begin()
 
 Plug 'arcticicestudio/nord-vim'
@@ -51,7 +51,9 @@ Plug 'dmerejkowsky/vim-ale'
 
 call plug#end()
 
-colorscheme nord
+" colorscheme nord
+
+" VIM-Ale Linters and Fixers
 
 let g:ale_linters = {'bash': ["shellcheck"]}
 let g:ale_linters = {'c': ["gcc"]}
@@ -66,4 +68,16 @@ let g:ale_fixers = {'java': ["checkstyle"]}
 let g:ale_fixers = {'python': ["black"]}
 
 let g:ale_fix_on_save = 1
+
+"" Key Mapping
+let mapleader = " "
+
+" clean trailing whitespace
+nnoremap <leader>w :%/\s\+$//e
+
+" NERDTree Key Bindings
+
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFocus<CR>
+nnoremap <leader>nc :NERDTreeClose<CR>
 
