@@ -1,11 +1,18 @@
 local lsp = require('lsp-zero')
+local lspconfig = require('lspconfig')
+
+lspconfig.clangd.setup({
+    local foxy_path = '/opt/ros/foxy'
+    if io.open(foxy_path, 'r') then
+        on_attach = function(client,bufnr)
+            add_include_path('-I' .. foxy_path .. '/include')
+            require('lsp').common_on_attach(client, bufnr)
+        end
+    end
+})
 
 lsp.preset('recommended')
 lsp.setup()
-
-lsp.ensure_installed({
-    'cmake',
-})
 
 -- Fix undefined global 'vim'
 lsp.configure('lua-language-server', {
@@ -59,4 +66,8 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true
+})
 
