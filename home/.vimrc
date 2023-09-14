@@ -1,5 +1,8 @@
 "" General
-syntax on
+set nocompatible                    " Disable Vi compatibility
+filetype plugin on                  " Enable filetype-specific plugins
+syntax on                           " Syntax highlighting
+
 set exrc                            " Custom vimrcs
 set relativenumber                  " Relative number
 set number                          " Show line numbers
@@ -42,42 +45,42 @@ set ruler                           " Show row and column ruler information
 set undolevels=1000                 " Number of undo levels
 set backspace=indent,eol,start	    " Backspace behaviour
 
-"" Plugins
-call plug#begin()
-
-Plug 'arcticicestudio/nord-vim'
-Plug 'preservim/nerdtree'
-Plug 'dmerejkowsky/vim-ale'
-
-call plug#end()
-
-" colorscheme nord
-
-" VIM-Ale Linters and Fixers
-
-let g:ale_linters = {'bash': ["shellcheck"]}
-let g:ale_linters = {'c': ["gcc"]}
-let g:ale_linters = {'c++': ["gcc"]}
-let g:ale_linters = {'java': ["checkstyle"]}
-let g:ale_linters = {'python': ["flake8"]}
-
-let g:ale_fixers = {'bash': ["shellcheck"]}
-let g:ale_fixers = {'c': ["gcc"]}
-let g:ale_fixers = {'c++': ["gcc"]}
-let g:ale_fixers = {'java': ["checkstyle"]}
-let g:ale_fixers = {'python': ["black"]}
-
-let g:ale_fix_on_save = 1
-
-"" Key Mapping
+"" Key Mappings
 let mapleader = " "
 
 " clean trailing whitespace
 nnoremap <leader>w :%/\s\+$//e
 
-" NERDTree Key Bindings
-
-nnoremap <leader>nt :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFocus<CR>
-nnoremap <leader>nc :NERDTreeClose<CR>
-
+"" Plugins
+"call plug#begin()
+"
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'preservim/nerdtree'
+"Plug 'dmerejkowsky/vim-ale'
+"
+"call plug#end()
+"
+"" colorscheme nord
+"
+"" VIM-Ale Linters and Fixers
+"
+"let g:ale_linters = {'bash': ["shellcheck"]}
+"let g:ale_linters = {'c': ["gcc"]}
+"let g:ale_linters = {'c++': ["gcc"]}
+"let g:ale_linters = {'java': ["checkstyle"]}
+"let g:ale_linters = {'python': ["flake8"]}
+"
+"let g:ale_fixers = {'bash': ["shellcheck"]}
+"let g:ale_fixers = {'c': ["gcc"]}
+"let g:ale_fixers = {'c++': ["gcc"]}
+"let g:ale_fixers = {'java': ["checkstyle"]}
+"let g:ale_fixers = {'python': ["black"]}
+"
+"let g:ale_fix_on_save = 1
+"
+"" NERDTree Key Bindings
+"
+"nnoremap <leader>nt :NERDTreeToggle<CR>
+"nnoremap <leader>nf :NERDTreeFocus<CR>
+"nnoremap <leader>nc :NERDTreeClose<CR>
+"
