@@ -51,17 +51,29 @@ let mapleader = " "
 " clean trailing whitespace
 nnoremap <leader>w :%/\s\+$//e
 
-"" Plugins
-"call plug#begin()
-"
-"Plug 'arcticicestudio/nord-vim'
+"" Plugins using vim-plug
+" automate first vim-plug install
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" start plugins
+call plug#begin()
+
+Plug 'vimwiki/vimwiki'
 "Plug 'preservim/nerdtree'
 "Plug 'dmerejkowsky/vim-ale'
-"
-"call plug#end()
-"
-"" colorscheme nord
-"
+
+call plug#end()
+
+" vimwiki settings
+let g:vimwiki_list =[{
+    \ 'path': '~/vimwiki/',
+    \ 'syntax': 'markdown',
+    \ 'etx': '.md'
+\}]
+
 "" VIM-Ale Linters and Fixers
 "
 "let g:ale_linters = {'bash': ["shellcheck"]}
