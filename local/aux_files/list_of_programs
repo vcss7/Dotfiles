@@ -4,6 +4,15 @@ linux
 linux-firmware
 networkmanager
 
+### Window System ###
+glfw-wayland
+qt5-wayland
+xorg-xlsclients
+xorg-xwayland
+
+### Application Launchers ####
+wofi            # Wayland
+
 ### Graphical file manager ###
 pcmanfm
 
@@ -45,6 +54,7 @@ feh
 dwm
 i3-wm
 xmonad
+sway            # Wayland
 
 ### Log in manager ###
 sddm
@@ -94,3 +104,7 @@ udisks2
 
 ### Only available in AUR or must install from source ###
 usbimager
+
+### Media Download ###
+qbittorrent
+yt-dlp
