@@ -34,6 +34,7 @@ nano
 
 ### Sound management ###
 alsa-utils
+pulseaudio
 
 ### Development tools ###
 base-devel      # Arch
