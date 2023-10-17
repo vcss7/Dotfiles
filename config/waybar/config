@@ -6,7 +6,7 @@
 
     "modules-left": ["sway/workspaces", "tray", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["sway/scratchpad", "idle_inhibitor", "disk#ssd", "temperature", "temperature2", "cpu", "memory", "network", "pulseaudio", "sway/language", "clock", "custom/weather"],
+    "modules-right": ["sway/scratchpad", "idle_inhibitor", "disk#ssd", "temperature", "temperature2", "cpu", "memory", "network", "pulseaudio", "clock", "custom/weather"],
 
      "sway/workspaces": {
          "disable-scroll": true,
