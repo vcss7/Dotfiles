@@ -7,37 +7,49 @@ vim.opt.guicursor = {
 	"sm:block-blinkwait175-blinkoff150-blinkon175"			-- showmatch insert mode: blinking
 }
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
+-- Enable line numbering
+vim.opt.nu = true               -- abosulte line numbers
+vim.opt.relativenumber = true   -- relative number line numbers
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+-- Tab configurations
+vim.opt.tabstop = 4         -- set width of a tab character
+vim.opt.softtabstop = 4     -- set width of tab counts for editing
+vim.opt.shiftwidth = 4      -- set width of each level of indentation
+vim.opt.expandtab = true    -- convert tabs to spaces
 
-vim.opt.smartindent = true
+-- Automatically adjust indentation
+vim.opt.smartindent = true  -- enable smart indentation
 
-vim.opt.wrap = false
+-- Disable line wrapping
+vim.opt.wrap = false    -- don't wrap lines
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+-- Disable swap file and backup files for clean environments
+vim.opt.swapfile = false    -- disable swap files
+vim.opt.backup = false      -- disable backup files
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+-- Undo file configurations
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"  -- set undo directory
+vim.opt.undofile = true     -- enable undo history across sessions
 
-vim.opt.termguicolors = true
+-- Search configurations
+vim.opt.hlsearch = false    -- disable search highlight
+vim.opt.incsearch = true    -- incremental search (search while typing)
 
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
+-- GUI color configuration
+vim.opt.termguicolors = true    -- enable RGB color support
 
-vim.opt.updatetime = 50
+-- Scrolling and sign column configurations
+vim.opt.scrolloff = 8           -- scroll file before reaching bottom
+vim.opt.signcolumn = "yes"      -- always show sign column
 
-vim.opt.colorcolumn = "80"
+-- Append to list of acceptable file name characters
+vim.opt.isfname:append("@-@")   -- allow `@` and `-`
 
-vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
-vim.api.nvim_set_keymap("i", "<C-Space>", 'copilot#Accept("<CR>")', {silent = true , expr = true})
+-- Timing configurations
+vim.opt.updatetime = 50     -- millis before updating file status
 
+-- Highlight column
+vim.opt.colorcolumn = "80"  -- highligh column
+
+-- Paste mode
+vim.opt.paste = true    -- disable easier pasting
