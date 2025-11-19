@@ -52,4 +52,4 @@ vim.opt.updatetime = 50     -- millis before updating file status
 vim.opt.colorcolumn = "80"  -- highligh column
 
 -- Paste mode
-vim.opt.paste = true    -- disable easier pasting
+vim.opt.paste = false       -- disable easier pasting
