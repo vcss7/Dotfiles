@@ -60,3 +60,9 @@ alias p='pwd'
 alias mpvcam='mpv --demuxer-lavf-format=video4linux2      \
                   --demuxer-lavf-o-set=input_format=mjpeg \
                   av://v5l2:/dev/video0'
+
+# quicker access to ranger
+alias r='ranger'
+
+# quicker access to lazygit
+alias lg='lazygit'
